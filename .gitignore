@@ -1,0 +1,38 @@
+# API 密钥 - 绝不提交
+.env
+.env.local
+.env.*.local
+
+# 监控面板凭证 (含 password hash + session secret)
+.monitor_auth.json
+
+# 运行时产生的敏感数据
+*-log.txt
+*-log.txt.*
+arbitrage_trades_*.csv
+arbitrage_trades_*.csv.*
+main-spread_history_*.csv
+spread_history_*.csv
+*.legacy_*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.swp
+.DS_Store
+
+# Runtime databases and local state
+*.db
+*.db-*
+*.sqlite
+*.sqlite3

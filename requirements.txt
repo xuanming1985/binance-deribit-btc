@@ -1,0 +1,6 @@
+aiohttp
+flask
+orjson
+redis
+requests
+websockets

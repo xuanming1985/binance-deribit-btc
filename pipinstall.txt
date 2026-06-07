@@ -1,0 +1,20 @@
+
+
+pip install websockets
+pip install flask
+pip install redis
+pip install orjson
+
+brew install redis
+brew services start redis
+
+sudo apt update
+sudo apt install redis-server
+sudo systemctl start redis-server
+
+pip3 install websockets
+pip3 install flask
+pip3 install redis
+pip3 install orjson
+pip3 install requests
+pip3 install aiohttp
