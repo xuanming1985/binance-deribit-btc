@@ -394,7 +394,7 @@ async def main():
             engine.settlement_twap_minutes = min(
                 max(5, int(currency_cfg.get("settlement_twap_minutes", 30))), 60)
             engine.settlement_twap_slices = min(
-                max(2, int(currency_cfg.get("settlement_twap_slices", 10))), 30)
+                max(2, int(currency_cfg.get("settlement_twap_slices", 30))), 30)
             engine.basis_monitor_hours = min(
                 max(0.5, float(currency_cfg.get("basis_monitor_hours", 3.0))), 12.0)
             engine.basis_early_trigger_usd = min(
@@ -435,7 +435,7 @@ async def main():
             f"• Binance 平仓TWAP: {int(getattr(engine, 'binance_close_twap_slices', 4))}片 / "
             f"{float(getattr(engine, 'binance_close_twap_interval_sec', 0.25)):.2f}s\n"
             f"• 结算TWAP: {'开启' if getattr(engine, 'settlement_twap_enabled', True) else '关闭'} "
-            f"({getattr(engine, 'settlement_twap_slices', 10)}片/{getattr(engine, 'settlement_twap_minutes', 30)}min)\n"
+            f"({getattr(engine, 'settlement_twap_slices', 30)}片/{getattr(engine, 'settlement_twap_minutes', 30)}min)\n"
             f"• 基差监控: 到期前{getattr(engine, 'basis_monitor_hours', 3.0)}h，绝对阈值${getattr(engine, 'basis_early_trigger_usd', 300.0)}/恶化阈值${getattr(engine, 'basis_deterioration_trigger_usd', 150.0)}\n"
             f"• 结算窗口暂停: 固定开启 (±{int(getattr(engine, '_settlement_pause_seconds', 120))}s)\n"
             f"• 结算窗口硬止损保护: {'开启' if getattr(engine, 'settlement_hard_stop_guard', True) else '关闭'} "
