@@ -564,7 +564,7 @@ class TelegramNotifier:
                     f"binance_close_twap_interval_sec: {getattr(_e, 'binance_close_twap_interval_sec', 0.25)}\n"
                     f"settlement_twap_enabled: {getattr(_e, 'settlement_twap_enabled', True)}\n"
                     f"settlement_twap_minutes: {getattr(_e, 'settlement_twap_minutes', 30)}\n"
-                    f"settlement_twap_slices: {getattr(_e, 'settlement_twap_slices', 10)}\n"
+                    f"settlement_twap_slices: {getattr(_e, 'settlement_twap_slices', 30)}\n"
                     f"basis_monitor_hours: {getattr(_e, 'basis_monitor_hours', 3.0)}\n"
                     f"basis_early_trigger_usd: {getattr(_e, 'basis_early_trigger_usd', 300.0)}\n"
                     f"basis_deterioration_trigger_usd: {getattr(_e, 'basis_deterioration_trigger_usd', 150.0)}\n"
